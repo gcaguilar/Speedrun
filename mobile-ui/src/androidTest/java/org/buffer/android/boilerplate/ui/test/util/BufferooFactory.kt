@@ -1,6 +1,6 @@
 package org.buffer.android.boilerplate.ui.test.util
 
-import org.buffer.android.boilerplate.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 
 /**
  * Factory class for Bufferoo related instances

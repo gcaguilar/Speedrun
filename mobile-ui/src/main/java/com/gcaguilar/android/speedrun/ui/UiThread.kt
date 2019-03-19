@@ -1,8 +1,8 @@
 package com.gcaguilar.android.speedrun.ui
 
+import com.gcaguilar.android.speedrun.data.executor.PostExecutionThread
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
-import org.buffer.android.boilerplate.data.executor.PostExecutionThread
 
 /**
  * MainThread (UI Thread) implementation based on a [Scheduler]

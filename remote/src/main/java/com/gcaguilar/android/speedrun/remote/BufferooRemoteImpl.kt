@@ -1,10 +1,10 @@
 package com.gcaguilar.android.speedrun.remote
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStore
 import com.gcaguilar.android.speedrun.remote.mapper.BufferooEntityMapper
 import io.reactivex.Completable
 import io.reactivex.Single
-import org.buffer.android.boilerplate.data.browse.Bufferoo
-import org.buffer.android.boilerplate.data.source.BufferooDataStore
 
 /**
  * Remote implementation for retrieving Bufferoo instances. This class implements the

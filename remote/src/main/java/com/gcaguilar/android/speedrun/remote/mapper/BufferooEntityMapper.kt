@@ -1,7 +1,7 @@
 package com.gcaguilar.android.speedrun.remote.mapper
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 import com.gcaguilar.android.speedrun.remote.model.BufferooModel
-import org.buffer.android.boilerplate.data.browse.Bufferoo
 
 /**
  * Map a [BufferooModel] to and from a [Bufferoo] instance when data is moving between

@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import org.buffer.android.boilerplate.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 import org.buffer.android.boilerplate.ui.R
 
 class BrowseAdapter : RecyclerView.Adapter<BrowseAdapter.ViewHolder>() {

@@ -1,9 +1,9 @@
 package org.buffer.android.boilerplate.cache.test.factory
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 import org.buffer.android.boilerplate.cache.model.CachedBufferoo
 import org.buffer.android.boilerplate.cache.test.factory.DataFactory.Factory.randomLong
 import org.buffer.android.boilerplate.cache.test.factory.DataFactory.Factory.randomUuid
-import org.buffer.android.boilerplate.data.browse.Bufferoo
 
 /**
  * Factory class for Bufferoo related instances

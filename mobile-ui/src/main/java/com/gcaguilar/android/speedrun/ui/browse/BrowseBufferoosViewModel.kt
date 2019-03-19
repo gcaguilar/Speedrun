@@ -3,8 +3,8 @@ package com.gcaguilar.android.speedrun.ui.browse
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.gcaguilar.android.speedrun.data.browse.interactor.GetBufferoos
 import io.reactivex.disposables.Disposable
-import org.buffer.android.boilerplate.data.browse.interactor.GetBufferoos
 
 class BrowseBufferoosViewModel(val getBufferoos: GetBufferoos) : ViewModel() {
 

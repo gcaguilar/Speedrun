@@ -1,14 +1,14 @@
 package org.buffer.android.boilerplate.ui.browse
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.browse.interactor.GetBufferoos
 import com.gcaguilar.android.speedrun.ui.browse.BrowseBufferoosViewModel
 import com.gcaguilar.android.speedrun.ui.browse.BrowseState
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
-import org.buffer.android.boilerplate.data.browse.Bufferoo
-import org.buffer.android.boilerplate.data.browse.interactor.GetBufferoos
 import org.buffer.android.boilerplate.ui.test.util.BufferooFactory
 import org.buffer.android.boilerplate.ui.test.util.DataFactory
 import org.junit.Rule

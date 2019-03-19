@@ -1,6 +1,16 @@
 package com.gcaguilar.android.speedrun.ui.di
 
 import androidx.room.Room
+import com.gcaguilar.android.speedrun.data.BufferooDataRepository
+import com.gcaguilar.android.speedrun.data.browse.interactor.GetBufferoos
+import com.gcaguilar.android.speedrun.data.executor.JobExecutor
+import com.gcaguilar.android.speedrun.data.executor.PostExecutionThread
+import com.gcaguilar.android.speedrun.data.executor.ThreadExecutor
+import com.gcaguilar.android.speedrun.data.repository.BufferooRepository
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStore
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStoreFactory
+import com.gcaguilar.android.speedrun.remote.BufferooRemoteImpl
+import com.gcaguilar.android.speedrun.remote.BufferooServiceFactory
 import com.gcaguilar.android.speedrun.ui.UiThread
 import com.gcaguilar.android.speedrun.ui.browse.BrowseAdapter
 import com.gcaguilar.android.speedrun.ui.browse.BrowseBufferoosViewModel
@@ -8,16 +18,6 @@ import org.buffer.android.boilerplate.cache.BufferooCacheImpl
 import org.buffer.android.boilerplate.cache.PreferencesHelper
 import org.buffer.android.boilerplate.cache.db.BufferoosDatabase
 import org.buffer.android.boilerplate.cache.mapper.BufferooEntityMapper
-import org.buffer.android.boilerplate.data.BufferooDataRepository
-import org.buffer.android.boilerplate.data.browse.interactor.GetBufferoos
-import org.buffer.android.boilerplate.data.executor.JobExecutor
-import org.buffer.android.boilerplate.data.executor.PostExecutionThread
-import org.buffer.android.boilerplate.data.executor.ThreadExecutor
-import org.buffer.android.boilerplate.data.repository.BufferooRepository
-import org.buffer.android.boilerplate.data.source.BufferooDataStore
-import org.buffer.android.boilerplate.data.source.BufferooDataStoreFactory
-import org.buffer.android.boilerplate.remote.BufferooRemoteImpl
-import org.buffer.android.boilerplate.remote.BufferooServiceFactory
 import org.buffer.android.boilerplate.ui.BuildConfig
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.ext.koin.viewModel
@@ -27,7 +27,7 @@ val applicationModule = module(override = true) {
 
     single { PreferencesHelper(androidContext()) }
 
-    factory { org.buffer.android.boilerplate.remote.mapper.BufferooEntityMapper() }
+    factory { com.gcaguilar.android.speedrun.remote.mapper.BufferooEntityMapper() }
 
     single { JobExecutor() as ThreadExecutor }
     single { UiThread() as PostExecutionThread }

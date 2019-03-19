@@ -1,7 +1,7 @@
 package org.buffer.android.boilerplate.cache.mapper
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 import org.buffer.android.boilerplate.cache.model.CachedBufferoo
-import org.buffer.android.boilerplate.data.browse.Bufferoo
 
 /**
  * Map a [CachedBufferoo] instance to and from a [Bufferoo] instance when data is moving between

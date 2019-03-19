@@ -1,12 +1,12 @@
 package org.buffer.android.boilerplate.cache
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStore
 import io.reactivex.Completable
 import io.reactivex.Single
 import org.buffer.android.boilerplate.cache.db.BufferoosDatabase
 import org.buffer.android.boilerplate.cache.mapper.BufferooEntityMapper
 import org.buffer.android.boilerplate.cache.model.CachedBufferoo
-import org.buffer.android.boilerplate.data.browse.Bufferoo
-import org.buffer.android.boilerplate.data.source.BufferooDataStore
 
 /**
  * Cached implementation for retrieving and saving Bufferoo instances. This class implements the

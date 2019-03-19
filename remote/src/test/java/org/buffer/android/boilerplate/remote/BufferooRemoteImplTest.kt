@@ -1,13 +1,13 @@
 package org.buffer.android.boilerplate.remote
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 import com.gcaguilar.android.speedrun.remote.BufferooRemoteImpl
 import com.gcaguilar.android.speedrun.remote.BufferooService
 import com.gcaguilar.android.speedrun.remote.mapper.BufferooEntityMapper
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
-import org.buffer.android.boilerplate.data.browse.Bufferoo
 import org.buffer.android.boilerplate.remote.test.factory.BufferooFactory
 import org.junit.Test
 import org.junit.runner.RunWith

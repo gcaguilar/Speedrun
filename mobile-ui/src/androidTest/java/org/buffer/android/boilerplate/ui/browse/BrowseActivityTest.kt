@@ -7,13 +7,13 @@ import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.repository.BufferooRepository
 import com.gcaguilar.android.speedrun.ui.browse.BrowseActivity
 import com.gcaguilar.android.speedrun.ui.di.applicationModule
 import com.gcaguilar.android.speedrun.ui.di.browseModule
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
-import org.buffer.android.boilerplate.data.browse.Bufferoo
-import org.buffer.android.boilerplate.data.repository.BufferooRepository
 import org.buffer.android.boilerplate.ui.R
 import org.buffer.android.boilerplate.ui.test.util.BufferooFactory
 import org.buffer.android.boilerplate.ui.test.util.RecyclerViewMatcher

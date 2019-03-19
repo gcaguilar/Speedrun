@@ -1,11 +1,11 @@
 package org.buffer.android.boilerplate.cache.mapper
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 import org.buffer.android.boilerplate.cache.model.CachedBufferoo
 import org.buffer.android.boilerplate.cache.test.factory.BufferooFactory
-import org.buffer.android.boilerplate.data.browse.Bufferoo
-import org.junit.*
-import org.junit.runner.*
-import org.junit.runners.*
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 import kotlin.test.assertEquals
 
 @RunWith(JUnit4::class)
