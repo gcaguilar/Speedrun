@@ -4,8 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.RelativeLayout
+import com.gcaguilar.android.speedrun.ui.R
 import kotlinx.android.synthetic.main.view_empty.view.*
-import org.buffer.android.boilerplate.ui.R
 
 /**
  * Widget used to display an empty state to the user

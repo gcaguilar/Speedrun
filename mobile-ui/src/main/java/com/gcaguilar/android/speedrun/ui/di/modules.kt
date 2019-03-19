@@ -11,10 +11,10 @@ import com.gcaguilar.android.speedrun.data.source.BufferooDataStoreFactory
 import com.gcaguilar.android.speedrun.remote.BufferooRemoteImpl
 import com.gcaguilar.android.speedrun.remote.BufferooServiceFactory
 import com.gcaguilar.android.speedrun.remote.mapper.BufferooEntityMapper
+import com.gcaguilar.android.speedrun.ui.BuildConfig
 import com.gcaguilar.android.speedrun.ui.UiThread
 import com.gcaguilar.android.speedrun.ui.browse.BrowseAdapter
 import com.gcaguilar.android.speedrun.ui.browse.BrowseBufferoosViewModel
-import org.buffer.android.boilerplate.ui.BuildConfig
 import org.koin.androidx.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 

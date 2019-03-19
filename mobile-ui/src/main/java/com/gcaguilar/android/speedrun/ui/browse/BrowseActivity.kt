@@ -6,10 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gcaguilar.android.speedrun.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.ui.R
 import com.gcaguilar.android.speedrun.ui.widget.empty.EmptyListener
 import com.gcaguilar.android.speedrun.ui.widget.error.ErrorListener
 import kotlinx.android.synthetic.main.activity_browse.*
-import org.buffer.android.boilerplate.ui.R
 import org.koin.android.ext.android.inject
 import org.koin.androidx.scope.ext.android.bindScope
 import org.koin.androidx.scope.ext.android.getOrCreateScope
