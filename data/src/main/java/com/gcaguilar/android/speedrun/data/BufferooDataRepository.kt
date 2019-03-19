@@ -13,32 +13,14 @@ import io.reactivex.Single
 class BufferooDataRepository(private val factory: BufferooDataStoreFactory) : BufferooRepository {
 
     override fun clearBufferoos(): Completable {
-        return factory.retrieveCacheDataStore().clearBufferoos()
+        TODO("This should not implement")
     }
 
     override fun saveBufferoos(bufferoos: List<Bufferoo>): Completable {
-        return factory.retrieveCacheDataStore().saveBufferoos(bufferoos)
+        TODO("This should not implement")
     }
 
     override fun getBufferoos(): Single<List<Bufferoo>> {
-        return factory.retrieveCacheDataStore().isValidCache()
-                .flatMap { cached ->
-                    // Get data store based on whether cached data is valid
-                    val bufferooDataStore = factory.retrieveDataStore(cached)
-
-                    val bufferooListSource = if (cached) {
-                        // Getting data from cache
-                        bufferooDataStore.getBufferoos()
-                    } else {
-                        // Getting data from remote, so result is cached
-                        bufferooDataStore.getBufferoos()
-                                .flatMap { bufferooList ->
-                                    // Once the result have been retrieved, save it to cache and return it
-                                    saveBufferoos(bufferooList).toSingle { bufferooList }
-                                }
-                    }
-
-                    bufferooListSource
-                }
+        return factory.retrieveRemoteDataStore().getBufferoos()
     }
 }

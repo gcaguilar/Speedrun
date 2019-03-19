@@ -4,7 +4,6 @@ package com.gcaguilar.android.speedrun.data.source
  * Create an instance of a BufferooDataStore
  */
 open class BufferooDataStoreFactory(
-        private val bufferooCacheDataStore: BufferooDataStore,
         private val bufferooRemoteDataStore: BufferooDataStore
 ) {
 
@@ -13,17 +12,7 @@ open class BufferooDataStoreFactory(
      * has not expired
      */
     open fun retrieveDataStore(isValidCache: Boolean): BufferooDataStore {
-        if (isValidCache) {
-            return retrieveCacheDataStore()
-        }
         return retrieveRemoteDataStore()
-    }
-
-    /**
-     * Return an instance of the Cache Data Store
-     */
-    open fun retrieveCacheDataStore(): BufferooDataStore {
-        return bufferooCacheDataStore
     }
 
     /**
