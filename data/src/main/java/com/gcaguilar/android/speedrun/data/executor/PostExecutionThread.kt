@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.data.executor
+package com.gcaguilar.android.speedrun.data.executor
 
 import io.reactivex.Scheduler
 

@@ -1,6 +1,6 @@
 package org.buffer.android.boilerplate.data.test.factory
 
-import org.buffer.android.boilerplate.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 import org.buffer.android.boilerplate.data.test.factory.DataFactory.Factory.randomLong
 import org.buffer.android.boilerplate.data.test.factory.DataFactory.Factory.randomUuid
 

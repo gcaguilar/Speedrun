@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.data.browse
+package com.gcaguilar.android.speedrun.data.browse
 
 /**
  * Representation for a [Bufferoo] fetched from an external layer data source

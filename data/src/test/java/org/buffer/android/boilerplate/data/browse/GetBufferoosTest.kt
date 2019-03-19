@@ -1,15 +1,16 @@
 package org.buffer.android.boilerplate.data.browse
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.browse.interactor.GetBufferoos
+import com.gcaguilar.android.speedrun.data.executor.PostExecutionThread
+import com.gcaguilar.android.speedrun.data.executor.ThreadExecutor
+import com.gcaguilar.android.speedrun.data.repository.BufferooRepository
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
-import org.buffer.android.boilerplate.data.browse.interactor.GetBufferoos
-import org.buffer.android.boilerplate.data.executor.PostExecutionThread
-import org.buffer.android.boilerplate.data.executor.ThreadExecutor
-import org.buffer.android.boilerplate.data.repository.BufferooRepository
 import org.buffer.android.boilerplate.data.test.factory.BufferooFactory
-import org.junit.*
+import org.junit.Test
 
 class GetBufferoosTest {
 

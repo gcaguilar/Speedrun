@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.data.source
+package com.gcaguilar.android.speedrun.data.source
 
 /**
  * Create an instance of a BufferooDataStore

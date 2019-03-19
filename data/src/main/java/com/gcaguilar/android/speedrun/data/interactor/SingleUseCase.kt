@@ -1,9 +1,9 @@
-package org.buffer.android.boilerplate.data.interactor
+package com.gcaguilar.android.speedrun.data.interactor
 
+import com.gcaguilar.android.speedrun.data.executor.PostExecutionThread
+import com.gcaguilar.android.speedrun.data.executor.ThreadExecutor
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
-import org.buffer.android.boilerplate.data.executor.PostExecutionThread
-import org.buffer.android.boilerplate.data.executor.ThreadExecutor
 
 /**
  * Abstract class for a UseCase that returns an instance of a [Single].

@@ -1,19 +1,17 @@
 package org.buffer.android.boilerplate.data
 
-import com.nhaarman.mockitokotlin2.any
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.never
-import com.nhaarman.mockitokotlin2.verify
-import com.nhaarman.mockitokotlin2.whenever
+import com.gcaguilar.android.speedrun.data.BufferooDataRepository
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStore
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStoreFactory
+import com.nhaarman.mockitokotlin2.*
 import io.reactivex.Completable
 import io.reactivex.Single
-import org.buffer.android.boilerplate.data.browse.Bufferoo
-import org.buffer.android.boilerplate.data.source.BufferooDataStore
-import org.buffer.android.boilerplate.data.source.BufferooDataStoreFactory
 import org.buffer.android.boilerplate.data.test.factory.BufferooFactory
-import org.junit.*
-import org.junit.runner.*
-import org.junit.runners.*
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 open class BufferooDataRepositoryTest {

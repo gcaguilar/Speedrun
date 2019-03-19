@@ -1,6 +1,4 @@
-package org.buffer.android.boilerplate.data.executor
-
-import java.util.concurrent.Executor
+package com.gcaguilar.android.speedrun.data.executor
 
 /**
  * Executor implementation can be based on different frameworks or techniques of asynchronous

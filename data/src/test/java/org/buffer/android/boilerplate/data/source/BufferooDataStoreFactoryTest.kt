@@ -1,12 +1,14 @@
 package org.buffer.android.boilerplate.data.source
 
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStore
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStoreFactory
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
-import org.junit.*
-import org.junit.Assert.*
-import org.junit.runner.*
-import org.junit.runners.*
+import org.junit.Assert.assertTrue
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @RunWith(JUnit4::class)
 class BufferooDataStoreFactoryTest {

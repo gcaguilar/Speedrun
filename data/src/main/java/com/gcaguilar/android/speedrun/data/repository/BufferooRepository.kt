@@ -1,8 +1,8 @@
-package org.buffer.android.boilerplate.data.repository
+package com.gcaguilar.android.speedrun.data.repository
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
 import io.reactivex.Completable
 import io.reactivex.Single
-import org.buffer.android.boilerplate.data.browse.Bufferoo
 
 interface BufferooRepository {
 

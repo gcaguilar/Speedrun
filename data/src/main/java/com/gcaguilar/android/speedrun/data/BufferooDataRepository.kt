@@ -1,10 +1,10 @@
-package org.buffer.android.boilerplate.data
+package com.gcaguilar.android.speedrun.data
 
+import com.gcaguilar.android.speedrun.data.browse.Bufferoo
+import com.gcaguilar.android.speedrun.data.repository.BufferooRepository
+import com.gcaguilar.android.speedrun.data.source.BufferooDataStoreFactory
 import io.reactivex.Completable
 import io.reactivex.Single
-import org.buffer.android.boilerplate.data.browse.Bufferoo
-import org.buffer.android.boilerplate.data.repository.BufferooRepository
-import org.buffer.android.boilerplate.data.source.BufferooDataStoreFactory
 
 /**
  * Provides an implementation of the [BufferooRepository] interface for communicating to and from
