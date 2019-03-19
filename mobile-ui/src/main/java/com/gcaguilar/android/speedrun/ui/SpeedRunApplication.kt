@@ -7,7 +7,7 @@ import org.buffer.android.boilerplate.ui.BuildConfig
 import org.koin.android.ext.android.startKoin
 import timber.log.Timber
 
-class BufferooApplication : Application() {
+class SpeedRunApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
