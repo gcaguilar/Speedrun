@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.ui.model
+package com.gcaguilar.android.speedrun.ui.model
 
 /**
  * Represents the state in which a [Resource] is currently in

@@ -1,7 +1,7 @@
-package org.buffer.android.boilerplate.ui.browse
+package com.gcaguilar.android.speedrun.ui.browse
 
+import com.gcaguilar.android.speedrun.ui.model.ResourceState
 import org.buffer.android.boilerplate.data.browse.Bufferoo
-import org.buffer.android.boilerplate.ui.model.ResourceState
 
 sealed class BrowseState(
         val resourceState: ResourceState,

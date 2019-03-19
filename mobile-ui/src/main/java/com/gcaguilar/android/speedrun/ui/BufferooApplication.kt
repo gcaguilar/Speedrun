@@ -1,8 +1,9 @@
-package org.buffer.android.boilerplate.ui
+package com.gcaguilar.android.speedrun.ui
 
 import android.app.Application
-import org.buffer.android.boilerplate.ui.di.applicationModule
-import org.buffer.android.boilerplate.ui.di.browseModule
+import com.gcaguilar.android.speedrun.ui.di.applicationModule
+import com.gcaguilar.android.speedrun.ui.di.browseModule
+import org.buffer.android.boilerplate.ui.BuildConfig
 import org.koin.android.ext.android.startKoin
 import timber.log.Timber
 

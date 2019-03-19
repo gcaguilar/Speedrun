@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.ui.widget.error
+package com.gcaguilar.android.speedrun.ui.widget.error
 
 interface ErrorListener {
 

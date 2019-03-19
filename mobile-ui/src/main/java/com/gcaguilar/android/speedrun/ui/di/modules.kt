@@ -1,6 +1,9 @@
-package org.buffer.android.boilerplate.ui.di
+package com.gcaguilar.android.speedrun.ui.di
 
 import androidx.room.Room
+import com.gcaguilar.android.speedrun.ui.UiThread
+import com.gcaguilar.android.speedrun.ui.browse.BrowseAdapter
+import com.gcaguilar.android.speedrun.ui.browse.BrowseBufferoosViewModel
 import org.buffer.android.boilerplate.cache.BufferooCacheImpl
 import org.buffer.android.boilerplate.cache.PreferencesHelper
 import org.buffer.android.boilerplate.cache.db.BufferoosDatabase
@@ -16,9 +19,6 @@ import org.buffer.android.boilerplate.data.source.BufferooDataStoreFactory
 import org.buffer.android.boilerplate.remote.BufferooRemoteImpl
 import org.buffer.android.boilerplate.remote.BufferooServiceFactory
 import org.buffer.android.boilerplate.ui.BuildConfig
-import org.buffer.android.boilerplate.ui.UiThread
-import org.buffer.android.boilerplate.ui.browse.BrowseAdapter
-import org.buffer.android.boilerplate.ui.browse.BrowseBufferoosViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module

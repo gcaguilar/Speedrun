@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.ui.widget.empty
+package com.gcaguilar.android.speedrun.ui.widget.empty
 
 interface EmptyListener {
 

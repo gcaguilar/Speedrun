@@ -1,18 +1,18 @@
-package org.buffer.android.boilerplate.ui.widget.error
+package com.gcaguilar.android.speedrun.ui.widget.empty
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.RelativeLayout
-import kotlinx.android.synthetic.main.view_error.view.button_try_again
+import kotlinx.android.synthetic.main.view_empty.view.*
 import org.buffer.android.boilerplate.ui.R
 
 /**
  * Widget used to display an empty state to the user
  */
-class ErrorView : RelativeLayout {
+class EmptyView : RelativeLayout {
 
-    var errorListener: ErrorListener? = null
+    var emptyListener: EmptyListener? = null
 
     constructor(context: Context) : super(context) {
         init()
@@ -28,7 +28,7 @@ class ErrorView : RelativeLayout {
     }
 
     private fun init() {
-        LayoutInflater.from(context).inflate(R.layout.view_error, this)
-        button_try_again.setOnClickListener { errorListener?.onTryAgainClicked() }
+        LayoutInflater.from(context).inflate(R.layout.view_empty, this)
+        button_check_again.setOnClickListener { emptyListener?.onCheckAgainClicked() }
     }
 }

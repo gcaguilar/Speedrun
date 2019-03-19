@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.ui
+package com.gcaguilar.android.speedrun.ui
 
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers

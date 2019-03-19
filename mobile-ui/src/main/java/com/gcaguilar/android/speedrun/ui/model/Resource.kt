@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.ui.model
+package com.gcaguilar.android.speedrun.ui.model
 
 class Resource<out T> constructor(val status: ResourceState, val data: T?, val message: String?) {
 

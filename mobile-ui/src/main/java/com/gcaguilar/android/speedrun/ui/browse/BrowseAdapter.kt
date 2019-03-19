@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.ui.browse
+package com.gcaguilar.android.speedrun.ui.browse
 
 import android.view.LayoutInflater
 import android.view.View

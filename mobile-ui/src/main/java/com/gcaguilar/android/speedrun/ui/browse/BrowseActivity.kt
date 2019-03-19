@@ -1,18 +1,15 @@
-package org.buffer.android.boilerplate.ui.browse
+package com.gcaguilar.android.speedrun.ui.browse
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_browse.progress
-import kotlinx.android.synthetic.main.activity_browse.recycler_browse
-import kotlinx.android.synthetic.main.activity_browse.view_empty
-import kotlinx.android.synthetic.main.activity_browse.view_error
+import com.gcaguilar.android.speedrun.ui.widget.empty.EmptyListener
+import com.gcaguilar.android.speedrun.ui.widget.error.ErrorListener
+import kotlinx.android.synthetic.main.activity_browse.*
 import org.buffer.android.boilerplate.data.browse.Bufferoo
 import org.buffer.android.boilerplate.ui.R
-import org.buffer.android.boilerplate.ui.widget.empty.EmptyListener
-import org.buffer.android.boilerplate.ui.widget.error.ErrorListener
 import org.koin.android.ext.android.inject
 import org.koin.androidx.scope.ext.android.bindScope
 import org.koin.androidx.scope.ext.android.getOrCreateScope
