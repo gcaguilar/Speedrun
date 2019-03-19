@@ -1,7 +1,7 @@
-package org.buffer.android.boilerplate.remote
+package com.gcaguilar.android.speedrun.remote
 
+import com.gcaguilar.android.speedrun.remote.model.BufferooModel
 import io.reactivex.Single
-import org.buffer.android.boilerplate.remote.model.BufferooModel
 import retrofit2.http.GET
 
 /**

@@ -1,7 +1,7 @@
 package org.buffer.android.boilerplate.remote.test.factory
 
-import org.buffer.android.boilerplate.remote.BufferooService
-import org.buffer.android.boilerplate.remote.model.BufferooModel
+import com.gcaguilar.android.speedrun.remote.BufferooService
+import com.gcaguilar.android.speedrun.remote.model.BufferooModel
 import org.buffer.android.boilerplate.remote.test.factory.DataFactory.Factory.randomLong
 import org.buffer.android.boilerplate.remote.test.factory.DataFactory.Factory.randomUuid
 

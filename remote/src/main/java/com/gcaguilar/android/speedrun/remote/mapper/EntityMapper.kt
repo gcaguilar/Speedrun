@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.remote.mapper
+package com.gcaguilar.android.speedrun.remote.mapper
 
 /**
  * Interface for model mappers. It provides helper methods that facilitate
