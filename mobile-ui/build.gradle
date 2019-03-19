@@ -43,7 +43,6 @@ dependencies {
     def mobileUiTestDependencies = rootProject.ext.mobileUiTestDependencies
 
     implementation project(':data')
-    implementation project(':cache')
     implementation project(':remote')
 
     implementation mobileUiDependencies.kotlin
