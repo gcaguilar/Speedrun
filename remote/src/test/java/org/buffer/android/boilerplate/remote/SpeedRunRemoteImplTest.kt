@@ -1,9 +1,8 @@
 package org.buffer.android.boilerplate.remote
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.gcaguilar.android.speedrun.data.browse.Bufferoo
-import com.gcaguilar.android.speedrun.remote.BufferooRemoteImpl
-import com.gcaguilar.android.speedrun.remote.BufferooService
+import com.gcaguilar.android.speedrun.remote.SpeedRunRemoteImpl
+import com.gcaguilar.android.speedrun.remote.SpeedRunService
 import com.gcaguilar.android.speedrun.remote.mapper.BufferooEntityMapper
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
@@ -13,12 +12,12 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class BufferooRemoteImplTest {
+class SpeedRunRemoteImplTest {
 
     private val entityMapper = mock<BufferooEntityMapper>()
-    private val bufferooService = mock<BufferooService>()
+    private val bufferooService = mock<SpeedRunService>()
 
-    private val bufferooRemoteImpl = BufferooRemoteImpl(bufferooService, entityMapper)
+    private val bufferooRemoteImpl = SpeedRunRemoteImpl(bufferooService, entityMapper)
 
     //<editor-fold desc="Get Bufferoos">
     @Test
@@ -44,7 +43,7 @@ class BufferooRemoteImplTest {
 
     private fun stubBufferooServiceGetBufferoos(
             observable:
-            Single<BufferooService.BufferooResponse>
+            Single<SpeedRunService.BufferooResponse>
     ) {
         whenever(bufferooService.getBufferoos())
                 .thenReturn(observable)

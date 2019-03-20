@@ -1,6 +1,6 @@
 package com.gcaguilar.android.speedrun.remote
 
-import com.google.gson.FieldNamingPolicy
+import com.gcaguilar.android.speedrun.remote.SpeedRunService.Companion.baseUrl
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -11,26 +11,26 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 /**
- * Provide "make" methods to create instances of [BufferooService]
+ * Provide "make" methods to create instances of [SpeedRunService]
  * and its related dependencies, such as OkHttpClient, Gson, etc.
  */
-object BufferooServiceFactory {
+object SpeedRunServiceFactory {
 
-    fun makeBuffeooService(isDebug: Boolean): BufferooService {
+    fun makeBuffeooService(isDebug: Boolean): SpeedRunService {
         val okHttpClient = makeOkHttpClient(
                 makeLoggingInterceptor(isDebug)
         )
         return makeBufferooService(okHttpClient, makeGson())
     }
 
-    private fun makeBufferooService(okHttpClient: OkHttpClient, gson: Gson): BufferooService {
+    private fun makeBufferooService(okHttpClient: OkHttpClient, gson: Gson): SpeedRunService {
         val retrofit = Retrofit.Builder()
-                .baseUrl("https://joe-birch-dsdb.squarespace.com/s/")
+                .baseUrl(baseUrl)
                 .client(okHttpClient)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
-        return retrofit.create(BufferooService::class.java)
+        return retrofit.create(SpeedRunService::class.java)
     }
 
     private fun makeOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
@@ -43,9 +43,7 @@ object BufferooServiceFactory {
 
     private fun makeGson(): Gson {
         return GsonBuilder()
-                .setLenient()
                 .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-                .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                 .create()
     }
 
