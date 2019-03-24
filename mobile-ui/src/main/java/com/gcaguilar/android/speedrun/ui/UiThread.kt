@@ -1,6 +1,6 @@
 package com.gcaguilar.android.speedrun.ui
 
-import com.gcaguilar.android.speedrun.data.executor.PostExecutionThread
+import com.gcaguilar.android.speedrun.data.common.executor.PostExecutionThread
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 
