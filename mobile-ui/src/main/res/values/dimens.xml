@@ -10,4 +10,7 @@
     <dimen name="text_smaller_body">12sp</dimen>
     <dimen name="text_tiny_body">10sp</dimen>
 
+    <dimen name="image_size_list">50dp</dimen>
+    <dimen name="padding_list">15dp</dimen>
+
 </resources>
