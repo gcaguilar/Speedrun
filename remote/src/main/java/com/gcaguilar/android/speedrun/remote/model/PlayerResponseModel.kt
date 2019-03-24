@@ -4,6 +4,6 @@ import com.google.gson.annotations.SerializedName
 
 private const val data = "data"
 
-data class GamesResponseModel(
+data class PlayerResponseModel(
         @field:SerializedName(data)
-        val gameResponseList: List<GameModel>)
+        val playerList: PlayerEntity)
