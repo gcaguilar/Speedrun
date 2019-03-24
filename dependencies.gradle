@@ -14,7 +14,7 @@ ext {
 
     // Libraries
     annotationVersion = '1.0.2'
-    appcompatVersion = '1.0.2'
+    appcompatVersion = '1.1.0-alpha03'
     recyclerViewVersion = '1.0.0'
     materialDesignVersion = '1.0.0'
     koinVersion = '1.0.2'
@@ -28,6 +28,7 @@ ext {
     roomVersion = '2.0.0'
     timberVersion = '4.7.1'
     glideVersion = '4.9.0'
+    legacySupport = '1.0.0'
 
     // Testing
     testCoreVersion = '1.1.0'
@@ -95,7 +96,9 @@ ext {
             rxAndroid           : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
             rxKotlin            : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
             glide               : "com.github.bumptech.glide:glide:${glideVersion}",
-            timber              : "com.jakewharton.timber:timber:${timberVersion}"
+            glideCompile        : "com.github.bumptech.glide:compiler:${glideVersion}",
+            timber              : "com.jakewharton.timber:timber:${timberVersion}",
+            legacy              : "androidx.legacy:legacy-support-v4:${legacySupport}"
     ]
 
     mobileUiTestDependencies = [

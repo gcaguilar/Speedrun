@@ -51,17 +51,18 @@ dependencies {
     implementation mobileUiDependencies.koinArch
     implementation mobileUiDependencies.androidAnnotation
     implementation mobileUiDependencies.appcompat
-    implementation mobileUiDependencies.recyclerView
     implementation mobileUiDependencies.materialDesign
     implementation mobileUiDependencies.lifecycleExtensions
     implementation mobileUiDependencies.lifecycleCommonJava8
-    implementation mobileUiDependencies.roomRuntime
+    implementation mobileUiDependencies.recyclerView
     implementation mobileUiDependencies.rxJava
     implementation mobileUiDependencies.rxAndroid
     implementation mobileUiDependencies.rxKotlin
     implementation mobileUiDependencies.glide
+    annotationProcessor mobileUiDependencies.glideCompile
     implementation mobileUiDependencies.timber
 
+    implementation mobileUiDependencies.legacy
     testImplementation mobileUiTestDependencies.kotlinJUnit
     androidTestImplementation mobileUiTestDependencies.lifecycleTest
     androidTestImplementation(mobileUiTestDependencies.koinTest, {
