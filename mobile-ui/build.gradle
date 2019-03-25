@@ -61,6 +61,8 @@ dependencies {
     implementation mobileUiDependencies.glide
     annotationProcessor mobileUiDependencies.glideCompile
     implementation mobileUiDependencies.timber
+    implementation mobileUiDependencies.joda
+
 
     implementation mobileUiDependencies.legacy
     testImplementation mobileUiTestDependencies.kotlinJUnit

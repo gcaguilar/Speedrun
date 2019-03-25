@@ -29,6 +29,7 @@ ext {
     timberVersion = '4.7.1'
     glideVersion = '4.9.0'
     legacySupport = '1.0.0'
+    timeVersion = '2.10.1.1'
 
     // Testing
     testCoreVersion = '1.1.0'
@@ -40,6 +41,7 @@ ext {
     mockitoKotlinVersion = '2.1.0'
     mockitoAndroidVersion = '2.25.0'
     runnerVersion = '1.1.1'
+
 
     dataDependencies = [
             kotlin   : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}",
@@ -98,7 +100,8 @@ ext {
             glide               : "com.github.bumptech.glide:glide:${glideVersion}",
             glideCompile        : "com.github.bumptech.glide:compiler:${glideVersion}",
             timber              : "com.jakewharton.timber:timber:${timberVersion}",
-            legacy              : "androidx.legacy:legacy-support-v4:${legacySupport}"
+            legacy              : "androidx.legacy:legacy-support-v4:${legacySupport}",
+            joda                : "net.danlew:android.joda:${timeVersion}"
     ]
 
     mobileUiTestDependencies = [
