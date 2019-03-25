@@ -14,7 +14,6 @@ import com.gcaguilar.android.speedrun.data.game.source.GameDataStoreFactory
 import com.gcaguilar.android.speedrun.data.game.source.PlayerDataStore
 import com.gcaguilar.android.speedrun.data.game.source.PlayerDataStoreFactory
 import com.gcaguilar.android.speedrun.remote.SpeedRunRemoteImpl
-
 import com.gcaguilar.android.speedrun.remote.SpeedRunServiceFactory
 import com.gcaguilar.android.speedrun.remote.mapper.GameEntityMapper
 import com.gcaguilar.android.speedrun.remote.mapper.PlayerEntityMapper
@@ -23,7 +22,6 @@ import com.gcaguilar.android.speedrun.ui.BuildConfig
 import com.gcaguilar.android.speedrun.ui.UiThread
 import com.gcaguilar.android.speedrun.ui.detail.DetailViewModel
 import com.gcaguilar.android.speedrun.ui.game.GameListViewModel
-import com.gcaguilar.android.speedrun.ui.main.NavigationViewModel
 import org.koin.androidx.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 
@@ -33,8 +31,7 @@ val applicationModule = module(override = true) {
     single { JobExecutor() as ThreadExecutor }
     single { UiThread() as PostExecutionThread }
 
-    factory { SpeedRunServiceFactory.makeBuffeooService(BuildConfig.DEBUG) }
-    viewModel { NavigationViewModel() }
+    factory { SpeedRunServiceFactory.makeSpeedRunService(BuildConfig.DEBUG) }
 }
 
 val gameModule = module("Game", override = true) {

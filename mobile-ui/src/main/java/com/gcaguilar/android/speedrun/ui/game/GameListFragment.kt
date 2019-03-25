@@ -12,22 +12,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gcaguilar.android.speedrun.data.game.model.Game
 import com.gcaguilar.android.speedrun.ui.R
 import com.gcaguilar.android.speedrun.ui.game.GameListState.Success
-import com.gcaguilar.android.speedrun.ui.main.NavigationViewModel
-import kotlinx.android.synthetic.main.game_list_fragment.*
+import kotlinx.android.synthetic.main.fragment_game_list.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class GameListFragment : Fragment(), GameListAdapter.GameListListener {
 
-    private val navigationViewModel: NavigationViewModel by sharedViewModel()
 
-    override fun onItemClicked(id: String) {
-        navigationViewModel.onItemClicked(id)
+    override fun onItemClicked(id: String, name: String, photoUri: String) {
+        gameListViewModel.onItemClicked(id, name, photoUri)
     }
 
     private lateinit var adapter: GameListAdapter
-    private val gameListViewModel: GameListViewModel by viewModel()
+    private val gameListViewModel: GameListViewModel by sharedViewModel()
 
     companion object {
         fun newInstance() = GameListFragment()
@@ -36,7 +33,7 @@ class GameListFragment : Fragment(), GameListAdapter.GameListListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.game_list_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_game_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,11 +52,10 @@ class GameListFragment : Fragment(), GameListAdapter.GameListListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        gameListViewModel.getGameListLiveData().observe(this, Observer<GameListState> {
+        gameListViewModel.getGameListLiveData().observe(viewLifecycleOwner, Observer<GameListState> {
             if (it != null) handleGameListState(it)
-        }
-        )
-        gameListViewModel.fecthList()
+        })
+        gameListViewModel.loadData()
     }
 
     private fun handleGameListState(state: GameListState) {

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.gcaguilar.android.speedrun.data.game.interactor.GetGameListUseCase
+import com.gcaguilar.android.speedrun.ui.main.Event
 import io.reactivex.disposables.Disposable
 import timber.log.Timber
 
@@ -12,13 +13,18 @@ class GameListViewModel(
 ) : ViewModel() {
 
     private val gameListLiveData: MutableLiveData<GameListState> = MutableLiveData()
+    private val navigateToDetail: MutableLiveData<Event<GameModel>> = MutableLiveData()
     private var disposable: Disposable? = null
 
     fun getGameListLiveData(): LiveData<GameListState> {
         return gameListLiveData
     }
 
-    fun fecthList() {
+    fun getNavigateToDetail(): LiveData<Event<GameModel>> {
+        return navigateToDetail
+    }
+
+    fun loadData() {
         gameListLiveData.value = GameListState.Loading
 
         disposable = gameListUseCase.execute()
@@ -35,5 +41,9 @@ class GameListViewModel(
     override fun onCleared() {
         super.onCleared()
         disposable?.dispose()
+    }
+
+    fun onItemClicked(id: String, name: String, photoUri: String) {
+        navigateToDetail.value = Event(GameModel(id, name, photoUri))
     }
 }

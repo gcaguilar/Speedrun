@@ -17,7 +17,7 @@ class GameListAdapter(val gameListListener: GameListListener,
     private var gameList: List<Game> = ArrayList()
 
     interface GameListListener {
-        fun onItemClicked(itemId: String)
+        fun onItemClicked(id: String, name: String, photoUri: String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -56,7 +56,8 @@ class GameListAdapter(val gameListListener: GameListListener,
                 }
             }
             itemView.setOnClickListener {
-                gameListListener.onItemClicked(gameList[adapterPosition].id)
+                val item = gameList[adapterPosition]
+                gameListListener.onItemClicked(item.id, item.name, item.logo)
             }
         }
 
