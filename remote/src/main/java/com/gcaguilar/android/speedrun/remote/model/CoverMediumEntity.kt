@@ -1,5 +1,5 @@
 package com.gcaguilar.android.speedrun.remote.model
 
-data class CoverMediumModel(
+data class CoverMediumEntity(
         val uri: String? = null
 )

@@ -9,5 +9,5 @@ data class AssetsModel(
         @field:SerializedName(logoGame)
         val coverSmallEntity: CoverSmallEntity,
         @field:SerializedName(cover)
-        val coverMedium: CoverMediumModel
+        val coverMedium: CoverMediumEntity
 )

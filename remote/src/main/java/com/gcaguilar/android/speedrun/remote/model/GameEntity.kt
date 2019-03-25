@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 private const val assets = "assets"
 
-data class GameModel(val id: String,
-                     val names: NameEntity,
-                     @field:SerializedName(assets)
+data class GameEntity(val id: String,
+                      val names: NameEntity,
+                      @field:SerializedName(assets)
                      val assetsModel: AssetsModel)
