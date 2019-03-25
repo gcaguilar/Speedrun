@@ -16,14 +16,14 @@ import java.util.concurrent.TimeUnit
  */
 object SpeedRunServiceFactory {
 
-    fun makeBuffeooService(isDebug: Boolean): SpeedRunService {
+    fun makeSpeedRunService(isDebug: Boolean): SpeedRunService {
         val okHttpClient = makeOkHttpClient(
                 makeLoggingInterceptor(isDebug)
         )
-        return makeBufferooService(okHttpClient, makeGson())
+        return makeSpeedRunService(okHttpClient, makeGson())
     }
 
-    private fun makeBufferooService(okHttpClient: OkHttpClient, gson: Gson): SpeedRunService {
+    private fun makeSpeedRunService(okHttpClient: OkHttpClient, gson: Gson): SpeedRunService {
         val retrofit = Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .client(okHttpClient)

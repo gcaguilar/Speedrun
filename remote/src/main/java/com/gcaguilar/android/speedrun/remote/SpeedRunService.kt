@@ -1,8 +1,8 @@
 package com.gcaguilar.android.speedrun.remote
 
 import com.gcaguilar.android.speedrun.remote.model.GamesResponseModel
-import com.gcaguilar.android.speedrun.remote.model.PlayerResponse
-import com.gcaguilar.android.speedrun.remote.model.RunsResponseModel
+import com.gcaguilar.android.speedrun.remote.model.PlayerResponseEntity
+import com.gcaguilar.android.speedrun.remote.model.RunsResponseEntity
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -22,12 +22,12 @@ interface SpeedRunService {
     }
 
     @GET(runs)
-    fun getRunsById(@Query(game) gameId: String): Single<RunsResponseModel>
+    fun getRunsById(@Query(game) gameId: String): Single<RunsResponseEntity>
 
     @GET(games)
     fun getGameList(): Single<GamesResponseModel>
 
     @GET(user)
-    fun getUserById(@Path("userId") userId: String): Single<PlayerResponse>
+    fun getUserById(@Path("userId") userId: String): Single<PlayerResponseEntity>
 
 }
