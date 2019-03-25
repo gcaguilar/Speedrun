@@ -1,0 +1,121 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    // Android
+    androidMinSdkVersion = 19
+    androidTargetSdkVersion = 28
+    androidCompileSdkVersion = 28
+
+    def kotlinVersion = rootProject.ext.kotlin_version
+
+    // Libraries
+    annotationVersion = '1.0.2'
+    appcompatVersion = '1.1.0-alpha03'
+    recyclerViewVersion = '1.0.0'
+    materialDesignVersion = '1.0.0'
+    koinVersion = '1.0.2'
+    rxJavaVersion = '2.2.7'
+    rxAndroidVersion = '2.1.1'
+    rxKotlinVersion = '2.3.0'
+    gsonVersion = '2.8.5'
+    okHttpVersion = '3.14.0'
+    retrofitVersion = '2.5.0'
+    lifecycleExtensionsVersion = '2.0.0'
+    roomVersion = '2.0.0'
+    timberVersion = '4.7.1'
+    glideVersion = '4.9.0'
+    legacySupport = '1.0.0'
+    timeVersion = '2.10.1.1'
+
+    // Testing
+    testCoreVersion = '1.1.0'
+    androidJUnitVersion = '1.1.0'
+    robolectricVersion = '4.2'
+    jUnitVersion = '4.12'
+    assertJVersion = '3.11.1'
+    espressoVersion = '3.1.1'
+    mockitoKotlinVersion = '2.1.0'
+    mockitoAndroidVersion = '2.25.0'
+    runnerVersion = '1.1.1'
+
+
+    dataDependencies = [
+            kotlin   : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}",
+            rxJava   : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxKotlin : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}"
+    ]
+
+    dataTestDependencies = [
+            junit        : "junit:junit:${jUnitVersion}",
+            kotlinJUnit  : "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj      : "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+
+    remoteDependencies = [
+            kotlin           : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}",
+            retrofit         : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            retrofitAdapter  : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            okHttp           : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            okHttpLogger     : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            gson             : "com.google.code.gson:gson:${gsonVersion}",
+            rxJava           : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxKotlin         : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            timber           : "com.jakewharton.timber:timber:${timberVersion}"
+    ]
+
+    remoteTestDependencies = [
+            junit        : "junit:junit:${jUnitVersion}",
+            kotlinJUnit  : "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj      : "org.assertj:assertj-core:${assertJVersion}",
+            testCore     : "androidx.test:core:${testCoreVersion}",
+            androidRunner: "androidx.test:runner:${runnerVersion}",
+            androidJUnit : "androidx.test.ext:junit:${androidJUnitVersion}",
+            robolectric  : "org.robolectric:robolectric:${robolectricVersion}"
+    ]
+
+    mobileUiDependencies = [
+            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}",
+            koin                : "org.koin:koin-android:${koinVersion}",
+            koinCompile         : "org.koin:koin-androidx-scope:${koinVersion}",
+            koinArch            : "org.koin:koin-androidx-viewmodel:${koinVersion}",
+            androidAnnotation   : "androidx.annotation:annotation:${annotationVersion}",
+            appcompat           : "androidx.appcompat:appcompat:${appcompatVersion}",
+            recyclerView        : "androidx.recyclerview:recyclerview:${recyclerViewVersion}",
+            materialDesign      : "com.google.android.material:material:${materialDesignVersion}",
+            lifecycleExtensions : "androidx.lifecycle:lifecycle-extensions:${lifecycleExtensionsVersion}",
+            lifecycleCommonJava8: "androidx.lifecycle:lifecycle-common-java8:${lifecycleExtensionsVersion}",
+            roomRuntime         : "androidx.room:room-runtime:${roomVersion}",
+            rxJava              : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid           : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxKotlin            : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            glide               : "com.github.bumptech.glide:glide:${glideVersion}",
+            glideCompile        : "com.github.bumptech.glide:compiler:${glideVersion}",
+            timber              : "com.jakewharton.timber:timber:${timberVersion}",
+            legacy              : "androidx.legacy:legacy-support-v4:${legacySupport}",
+            joda                : "net.danlew:android.joda:${timeVersion}"
+    ]
+
+    mobileUiTestDependencies = [
+            kotlinJUnit    : "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            lifecycleTest  : "androidx.arch.core:core-testing:${lifecycleExtensionsVersion}",
+            koinTest       : "org.koin:koin-test:${koinVersion}",
+            mockitoKotlin  : "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
+            junit          : "junit:junit:${jUnitVersion}",
+            mockitoAndroid : "org.mockito:mockito-android:${mockitoAndroidVersion}",
+            androidJUnit   : "androidx.test.ext:junit:${androidJUnitVersion}",
+            androidRunner  : "androidx.test:runner:${runnerVersion}",
+            androidRules   : "androidx.test:rules:${runnerVersion}",
+            espressoCore   : "androidx.test.espresso:espresso-core:${espressoVersion}",
+            espressoIntents: "androidx.test.espresso:espresso-intents:${espressoVersion}",
+            espressoContrib: "androidx.test.espresso:espresso-contrib:${espressoVersion}"
+    ]
+}
