@@ -9,37 +9,47 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/im_detail_logo_game"
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="@dimen/top_header_image_detail" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_detail_game_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_list">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_detail_player_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginEnd="15dp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_detail_player_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end" />
-
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
     </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_detail_player_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fb_detail_play_video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/padding_list"
         android:src="@drawable/ic_play_arrow" />
 
     <ProgressBar
@@ -47,5 +57,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:padding="@dimen/padding_list"
         android:visibility="gone" />
 </LinearLayout>

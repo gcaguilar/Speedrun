@@ -12,5 +12,6 @@
 
     <dimen name="image_size_list">50dp</dimen>
     <dimen name="padding_list">15dp</dimen>
-
+    <dimen name="top_header_image_detail">150dp</dimen>
+    <dimen name="image_list_size">50dp</dimen>
 </resources>
